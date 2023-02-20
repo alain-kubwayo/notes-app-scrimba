@@ -22,7 +22,7 @@ export default function App() {
     function createNewNote() {
         const newNote = {
             id: nanoid(),
-            body: "# Digite aqui o título da sua anotação"
+            body: "# Start typing to create a note..."
         }
         setNotes(prevNotes => [newNote, ...prevNotes])
         setCurrentNoteId(newNote.id)
@@ -82,12 +82,12 @@ export default function App() {
             </Split>
             :
             <div className="no-notes">
-                <h1>Você não possui anotações</h1>
+                <h1>You have no notes</h1>
                 <button 
                     className="first-note" 
                     onClick={createNewNote}
                 >
-                    Criar uma agora
+                    Create one now
                 </button>
             </div>
             
